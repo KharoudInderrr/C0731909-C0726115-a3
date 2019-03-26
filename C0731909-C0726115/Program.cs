@@ -15,7 +15,12 @@ namespace C0731909_C0726115
         {
             DataStructureStack a = new DataStructureStack();
             a.Run();
+           
+
+            Student s1 = new Student();
+            s1.Announcement();
             AverageStudentGPA();
+
 
             Console.ReadLine();
 
@@ -69,7 +74,7 @@ namespace C0731909_C0726115
 
             try
             {
-                using (StreamReader sr = new StreamReader("U: /Users/names.txt"))
+                using (StreamReader sr = new StreamReader("U:/Users/731909/C0731909-C0726115/names.txt"))
                 {
                     string line;
                     while ((line = sr.ReadLine()) != null)
