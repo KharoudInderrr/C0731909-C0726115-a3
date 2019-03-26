@@ -16,6 +16,27 @@ namespace C0731909_C0726115
 
 
         }
+        static void AverageStudentGPA()
+        {
+            Student student1 = new Student();
+            Student student2 = new Student();
+            Student student3 = new Student();
+            Student student4 = new Student();
+            Student student5 = new Student();
+
+            ArrayList stu = new ArrayList();
+            stu.Add(student1);
+            stu.Add(student2);
+            stu.Add(student3);
+            stu.Add(student4);
+            stu.Add(student5);
+
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine(stu[0]);
+            }
+        }
+
     }
 
     class Student
@@ -60,78 +81,84 @@ namespace C0731909_C0726115
                 Console.WriteLine(e.Message);
             }
         }
-    
 
 
-            }
-        
+
+
+
         public double AverageStudentGPA()
         {
+            double sum = 0;
             // TO DO: implement the algorithm to calculate the Students' average GPA
-            return 0;
-        }
-    }
-
-    public interface IDataStructure
-    {
-        void Sort();
-    }
-
-    class DataStructureQueue : IDataStructure
-    {
-        // the QUEUE holds the classes (that is classroom of students!)
-        // TO DO: insert the contents of the Data File: Classroom Data Set 
-
-        public Queue q1 = new Queue();
-
-        Sort_DataStructure Sort1;
-
-        public void Sorter()
-        {
-            // TO DO : sort the Queue 
-        }
-
-        public void Run()
-        {
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < names.Length; i++)
             {
-                q1.Enqueue(new Student());
+                sum += StudentGPA;
             }
-            Sort1 = new Sort_DataStructure(Sorter);
-        }
-        public void Sort()
-        {
-
+            return StudentGPA;
         }
 
-    }
-
-    class DataStructureStack : IDataStructure
-    {
-        // the STACK holds the Students
-        public Stack s1 = new Stack();
-
-        Sort_DataStructure Sort1;
-
-        public void Sorter()
+        public interface IDataStructure
         {
-            // TO DO : sort the Stack
+            void Sort();
         }
 
-        public void Run()
+
+        class DataStructureQueue : IDataStructure
         {
-            for (int i = 0; i < 20; i++)
+            // the QUEUE holds the classes (that is classroom of students!)
+            // TO DO: insert the contents of the Data File: Classroom Data Set 
+
+            public Queue q1 = new Queue();
+
+            Sort_DataStructure Sort1;
+
+            public void Sorter()
             {
-                s1.Push(new Student());
+                // TO DO : sort the Queue 
             }
 
-            Sort1 = new Sort_DataStructure(Sorter);
+            public void Run()
+            {
+                for (int i = 0; i < 20; i++)
+                {
+                    q1.Enqueue(new Student());
+                }
+                Sort1 = new Sort_DataStructure(Sorter);
+            }
+            public void Sort()
+            {
+
+            }
+
         }
 
-        public void Sort() { }
+        class DataStructureStack : IDataStructure
+        {
+            // the STACK holds the Students
+            public Stack s1 = new Stack();
+
+            Sort_DataStructure Sort1;
+
+            public void Sorter()
+            {
+                // TO DO : sort the Stack
+            }
+
+            public void Run()
+            {
+                for (int i = 0; i < 20; i++)
+                {
+                    s1.Push(new Student());
+                }
+
+                Sort1 = new Sort_DataStructure(Sorter);
+            }
+
+            public void Sort() { }
+        }
     }
 
-}
+
 
 namespace BubbleSort
 {
