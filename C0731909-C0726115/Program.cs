@@ -4,13 +4,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace C0731909_C0726115
 {
     public delegate void Sort_DataStructure();
     class Program
     {
-        static void Main(string[] args) { }
+        static void Main(string[] args)
+        {
+
+
+        }
     }
 
     class Student
@@ -32,6 +37,34 @@ namespace C0731909_C0726115
             StudentGPA = Convert.ToDouble(r1.Next(1, 99));
         }
 
+
+        public void Announcement()
+        {
+
+
+            try
+            {
+                using (StreamReader sr = new StreamReader("U: /Users/names.txt"))
+                {
+                    string line;
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        Console.WriteLine(line);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+
+                Console.WriteLine("The file could not be read:");
+                Console.WriteLine(e.Message);
+            }
+        }
+    
+
+
+            }
+        
         public double AverageStudentGPA()
         {
             // TO DO: implement the algorithm to calculate the Students' average GPA
