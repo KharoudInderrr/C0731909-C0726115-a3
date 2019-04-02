@@ -127,6 +127,27 @@ namespace C0731909_C0726115
         public void Sorter()
         {
             // TO DO : sort the Queue 
+             // TO DO : sort the Queue 
+            q1.Enqueue("Java - SAT - AM - A202");
+            q1.Enqueue("Csharp - MON - PM - B122");
+            q1.Enqueue("Math - FRI - AM - A506");
+            q1.Enqueue("BigData - THU - B230");
+            q1.Enqueue("Java - WED - PM - A202");
+            q1.Enqueue("Csharp - THU - PM - B125");
+            q1.Enqueue("Math - TUE - AM - B130");
+            q1.Enqueue("EmergingTechnologies - FRI - B122");
+            q1.Enqueue("MicrosoftDataStack - MON - PM - B122");
+            q1.Enqueue("Math - MON - PM - B122");
+            q1.Enqueue("Python - FRI - AM - B125");
+            q1.Enqueue("JavaEE - FRI - PM - B230");
+            q1.Enqueue("SignalProcessing - WED - PM - LAB1");
+            q1.Enqueue("EmbeddedProcessor");
+
+            foreach (Object obj in q1)
+            {
+                Console.WriteLine(obj);
+            }
+            Console.ReadKey();
         }
 
         public void Run()
